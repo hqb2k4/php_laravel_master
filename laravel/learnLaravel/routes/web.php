@@ -33,13 +33,16 @@ Route::fallback(function () {
 
 //Route->view
 //  Passing Data from Route to View
-Route::get('about-us', function () {
-    $name = "Hoang Quoc Bao";
-    $age = 22;
+Route::get('about-us/{name}/{age}', function ($name, $age) {
+    // $name = "Hoang Quoc Bao";
+    // $age = 22;
     // Passing Data from Route to View using with() method
     // return view('aboutus')->with(['name' => $name, 'age' => $age]);
 
     // Passing Data from Route to View using compact() method
+    // return view('aboutus', compact('name', 'age'));
+
+    // Passing Data from Route to View 
     return view('aboutus', compact('name', 'age'));
 });
 
