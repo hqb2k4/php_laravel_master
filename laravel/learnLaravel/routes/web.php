@@ -30,3 +30,10 @@ Route::get('student/{id}/{name}', function ($id, $name) {
 Route::fallback(function () {
     return "The page you are looking for does not exist. <a href='/'>Go to Home</a>";
 });
+
+//Route->view
+Route::get('about-us', function () {
+    return view('aboutus');
+});
+
+Route::view('contact-us', 'contactus');
