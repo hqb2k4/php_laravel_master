@@ -51,5 +51,11 @@ Route::get('about-us/{name}/{age}', function ($name, $age) {
 Route::view('contact-us/{name}/{age}', 'contactus');
 
 // Route to Controller
-Route::get('books',[BookController::class, 'index']);
+// Route::get('books',[BookController::class, 'index']);
+
+// Route to Controller Group
+Route::controller(BookController::class)->group(function () {
+    Route::get('books', 'index');
+    Route::get('about-book', 'aboutBook');
+});
 

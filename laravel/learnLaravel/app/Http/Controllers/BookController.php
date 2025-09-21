@@ -9,4 +9,8 @@ class BookController extends Controller
     function index() {
         return "Hello Book";
     }
+
+    function aboutBook() {
+        return "About Book";
+    }
 }
