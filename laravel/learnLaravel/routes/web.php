@@ -32,8 +32,15 @@ Route::fallback(function () {
 });
 
 //Route->view
+//  Passing Data from Route to View
 Route::get('about-us', function () {
-    return view('aboutus');
+    $name = "Hoang Quoc Bao";
+    $age = 22;
+    // Passing Data from Route to View using with() method
+    return view('aboutus')->with(['name' => $name, 'age' => $age]);
 });
 
 Route::view('contact-us', 'contactus');
+
+
+
