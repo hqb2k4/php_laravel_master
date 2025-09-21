@@ -25,3 +25,8 @@ Route::prefix('details')->group(function () {
 Route::get('student/{id}/{name}', function ($id, $name) {
     return "Student ID: " . $id . ", Name: " . $name;
 });
+
+// Route Fallback
+Route::fallback(function () {
+    return "The page you are looking for does not exist. <a href='/'>Go to Home</a>";
+});
