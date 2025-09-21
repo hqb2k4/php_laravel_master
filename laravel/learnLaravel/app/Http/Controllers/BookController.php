@@ -11,6 +11,11 @@ class BookController extends Controller
     }
 
     function aboutBook() {
-        return "About Book";
+        $private = $this->privateFunction();
+        return "About Book - " . $private;
+    }
+
+    function privateFunction() {
+        return "Private Function";
     }
 }
