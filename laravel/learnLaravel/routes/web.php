@@ -1,7 +1,8 @@
 <?php
-
+use App\Http\Controllers\TestInvok;
 use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
+
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -58,4 +59,7 @@ Route::controller(BookController::class)->group(function () {
     Route::get('books', 'index');
     Route::get('about-book', 'aboutBook');
 });
+
+// Invoke Controller 
+Route::get('invoke', TestInvok::class);
 
