@@ -46,7 +46,7 @@ Route::get('about-us/{name}/{age}', function ($name, $age) {
     return view('aboutus', compact('name', 'age'));
 });
 
-Route::view('contact-us', 'contactus');
-
+// Route::view('contact-us', 'contactus');
+Route::view('contact-us/{name}/{age}', 'contactus');
 
 
