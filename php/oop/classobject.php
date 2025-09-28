@@ -11,16 +11,15 @@ class Car {
     public function __construct($color, $model) {
         $this->color = $color;
         $this->model = $model;
+        $this->run();
     }
 
     //Method
     public function run() {
-        return "The car is running";
+        echo "The car is running" . "My car is a " . $this->color . " " . $this->model . ".<br>";
     }
 }
 
 // Object
 $myCar = new Car("black", "Volvo");
 
-echo "My car is a " . $myCar->color . " " . $myCar->model . ".<br>";
-echo $myCar->run();
