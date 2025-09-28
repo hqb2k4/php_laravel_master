@@ -7,6 +7,12 @@ class Car {
     public $color;
     public $model;
 
+    // contructor
+    public function __construct($color, $model) {
+        $this->color = $color;
+        $this->model = $model;
+    }
+
     //Method
     public function run() {
         return "The car is running";
@@ -14,11 +20,7 @@ class Car {
 }
 
 // Object
-$myCar = new Car();
-
-// Set property values
-$myCar->color = "black";    
-$myCar->model = "Volvo";
+$myCar = new Car("black", "Volvo");
 
 echo "My car is a " . $myCar->color . " " . $myCar->model . ".<br>";
 echo $myCar->run();
